@@ -1,0 +1,19 @@
+{
+    "items" : [
+        {
+            "image" : "",
+            "text" : "Home",
+            "route" : "#/"
+        },
+        {
+            "image" : "",
+            "text" : "View Schedule",
+            "route" : "#/schedule"
+        },
+        {
+            "image" : "",
+            "text" : "Request Off",
+            "route" : "#/request-off"
+        }
+    ]
+}
