@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kobe Staff Website</title>
-
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-route/angular-route.js"></script>
-    <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.js"></script>
-    <script src="node_modules/angular-messages/angular-messages.js"></script>
-    <script src="node_modules/angular-material/angular-material.js"></script>
-    <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
-    <script src="build/build.js"></script>
-    <!--<link rel="stylesheet" href="node_modules/angular-material/layouts/angular-material.layouts.min.css" type="text/css" />-->
-    <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css" type="text/css" />
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.js"></script>
+    <script src="./node_modules/angular-aria/angular-aria.js"></script>
+    <script src="./node_modules/angular-material/angular-material.js"></script>
+    <script src="./node_modules/angular-messages/angular-messages.js"></script>
+    <script src="./node_modules/angular-material-icons/angular-material-icons.js"></script>
+    <script src="./build/build.js"></script>
+    <link rel="stylesheet" href="./node_modules/angular-material/angular-material.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/default.css" type="text/css" />
 </head>
 <body ng-app="KobeStaffWebsite" ng-cloak layout="column">
-<header>
-    <md-toolbar>
-    </md-toolbar>
-</header>
 <div flex layout="row">
     <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1 minor-padding">
         <div flex>
             <md-content>
+                <div class="centered">
+                    <img src="images/logo.png" width="60%" height="60%" />
+                </div>
                 <md-list class="md-dense" flex>
-                    <md-list-item class="md-3-line">
+                    <md-list-item class="md-3-line" href="#/">
                         <ng-md-icon style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
                         <div class="md-list-item-text" layout="column">
                             <h3>Home</h3>
-                            <h4>/</h4>
-                            <!--<p>Rawrzz</p>-->
+                            <p>View Home</p>
                         </div>
                     </md-list-item>
-                    <md-list-item class="md-3-line">
+                    <md-list-item class="md-3-line" href="#/account">
+                        <ng-md-icon icon="account_box" style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>My Account</h3>
+                            <p>Info, Settings, Etc.</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line" href="#/view-schedule">
                         <ng-md-icon icon="my_library_books" style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
                         <div class="md-list-item-text" layout="column">
-                            <h3>View Schedule</h3>
-                            <h4>hehe</h4>
-                            <p>Rawrzz</p>
+                            <h3>Schedule</h3>
+                            <p>View Schedules</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line" href="#/request-off">
+                        <ng-md-icon icon="queue" style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>Request Off</h3>
+                            <p>Submit a Request Off</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line" href="#/staff">
+                        <ng-md-icon icon="people" style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>Staff</h3>
+                            <p>View Other Staff Members</p>
                         </div>
                     </md-list-item>
                 </md-list>
