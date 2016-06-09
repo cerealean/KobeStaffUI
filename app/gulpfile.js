@@ -29,6 +29,8 @@ function compile(watch) {
           .pipe(gulp.dest("./build"));
     }
 
+    rebundle();
+
     if (watch) {
         bundler.on("update", function () {
             var dateNow = new Date();
@@ -39,8 +41,6 @@ function compile(watch) {
             rebundle();
         });
     }
-
-    rebundle();
 }
 
 function watch() {

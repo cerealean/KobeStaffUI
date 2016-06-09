@@ -2,8 +2,8 @@
 const dependencies = [
     "ngRoute",
     "ngAnimate",
+    "ngMaterial",
     "ngMessages",
-    "ngMaterial", 
     "ngMdIcons"
 ];
 angular.module("KobeStaffWebsite", dependencies);

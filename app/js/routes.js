@@ -8,6 +8,11 @@ angular.module("KobeStaffWebsite")
                 controller: "IndexController",
                 controllerAs: "indexController"
             })
+            .when("/request-off", {
+                templateUrl: "templates/request-off.html",
+                controller: "RequestOffController",
+                controllerAs: "requestOffController"
+            })
             .otherwise({
                 redirectTo: "/"
             })

@@ -1,8 +1,19 @@
-div{
-    border: 2px solid peru;
+.minor-padding {
     padding: 3px;
 }
 
-.minor-padding {
+.template-wrapper {
+    margin: 3px;
     padding: 3px;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 5px 0 0 25px;
 }

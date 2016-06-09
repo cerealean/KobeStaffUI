@@ -1,0 +1,30 @@
+<header>
+    <md-toolbar>
+        <span>Request Off</span>
+    </md-toolbar>
+</header>
+<div class="template-wrapper" ng-cloak layout="column" class="md-inline-form">
+    <md-content layout-padding>
+        <form name="requestOffForm">
+            <div class="md-block" flex-gt-sm>
+                <h4>Start Date</h4>
+                <md-datepicker name="startDate" required ng-model="requestOffController.requestOff.startDate" md-placeholder="Start Date" md-min-date="requestOffController.minDate"></md-datepicker>
+                <div class="validation-messages" ng-messages="requestOffForm.startDate.$error" role="alert" multiple>
+                    <div ng-message="valid" class="my-message">The entered value is not a valid date. Please use mm/dd/yyyy.</div>
+                    <div ng-message="required" class="my-message">You must enter a start date</div>
+                    <div ng-message="mindate" class="my-message">Your start date must be at least {{requestOffController.minimumDaysOffset}} days in the future</div>
+                </div>
+            </div>
+
+            <div  class="md-block" flex-gt-sm>
+                <h4>End Date</h4>
+                <md-datepicker name="endDate" required ng-model="requestOffController.requestOff.endDate" md-placeholder="End Date" md-min-date="requestOffController.requestOff.startDate"></md-datepicker>
+                <div class="validation-messages" ng-messages="requestOffForm.endDate.$error" role="alert" multiple>
+                    <div ng-message="valid" class="my-message">The entered value is not a valid date. Please use mm/dd/yyyy.</div>
+                    <div ng-message="required" class="my-message">You must enter an end date</div>
+                    <div ng-message="mindate" class="my-message">Your end date must be greater than your start date</div>
+                </div>
+            </div>
+        </form>
+    </md-content>
+</div>
