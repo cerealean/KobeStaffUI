@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobe Staff Website</title>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
+    <script src="build/build.js"></script>
+    <!--<link rel="stylesheet" href="node_modules/angular-material/layouts/angular-material.layouts.min.css" type="text/css" />-->
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css" type="text/css" />
+</head>
+<body ng-app="KobeStaffWebsite" ng-cloak layout="column">
+<header>
+    <md-toolbar>
+    </md-toolbar>
+</header>
+<div flex layout="row">
+    <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1 minor-padding">
+        <div flex>
+            <md-content>
+                <md-list class="md-dense" flex>
+                    <md-list-item class="md-3-line">
+                        <ng-md-icon style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>Home</h3>
+                            <h4>/</h4>
+                            <!--<p>Rawrzz</p>-->
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line">
+                        <ng-md-icon icon="my_library_books" style="fill: #abcdef;" icon="home" size="67"></ng-md-icon>
+                        <div class="md-list-item-text" layout="column">
+                            <h3>View Schedule</h3>
+                            <h4>hehe</h4>
+                            <p>Rawrzz</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+    </md-sidenav>
+    <div layout="column" flex>
+        <div class="view-container container body-content">
+            <div ng-view class="view-frame"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    <span>{{menuItems.length}}</span>
+    <p>&copy; Michael Crawford</p>
+</footer>
+</body>
+</html>
