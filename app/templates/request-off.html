@@ -25,6 +25,15 @@
                     <div ng-message="mindate" class="my-message">Your end date must be greater than your start date</div>
                 </div>
             </div>
+
+            <md-input-container class="md-block">
+                <label>Reason</label>
+                <textarea ng-model="requestOffController.requestOff.reasonText" md-maxlength="1000" required name="reasonText" rows="5" md-select-on-focus></textarea>
+                <div class="validation-messages" ng-messages="requestOffForm.reasonText.$error" role="alert" multiple>
+                    <div ng-message="required" class="my-message">Reason is required</div>
+                    <div ng-message="md-maxlength" class="my-message">Your maximum length can be no longer than 1000 characters</div>
+                </div>
+            </md-input-container>
         </form>
     </md-content>
 </div>
