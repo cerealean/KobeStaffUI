@@ -1,0 +1,22 @@
+{
+    "name": "cerealean/kobe-staff-site",
+    "description": "Personal project",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Michael Crawford",
+            "email": "cerealean@me.com"
+        }
+    ],
+    "require": {
+        "zendframework/zend-component-installer": "^0.3.0",
+        "zendframework/zendframework": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/",
+            "Api\\": "module/Api/src/"
+        }
+    }
+}
