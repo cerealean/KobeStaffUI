@@ -13,6 +13,11 @@ angular.module("KobeStaffWebsite")
                 controller: "RequestOffController",
                 controllerAs: "requestOffController"
             })
+            .when("/schedule", {
+                templateUrl: "templates/schedule/schedule.html",
+                controller: "ScheduleController",
+                controllerAs: "scheduleController"
+            })
             .otherwise({
                 redirectTo: "/"
             })
