@@ -2,6 +2,7 @@
 
 class IndexController {
     constructor(){
+        this.toolbarTitle = "Home";
         this.menuItems = require("../../resources/menu.json");
         console.log(this.menuItems);
     }

@@ -1,14 +1,10 @@
-<header>
-    <md-toolbar>
-        <span>Request Off</span>
-    </md-toolbar>
-</header>
+<ng-include src="'/app/templates/toolbar.html'"></ng-include>
 <div class="template-wrapper" ng-cloak layout="column" class="md-inline-form">
     <md-content layout-padding>
         <form name="requestOffForm">
             <div class="md-block" flex-gt-sm>
                 <h4>Start Date</h4>
-                <md-datepicker name="startDate" required ng-model="requestOffController.requestOff.startDate" md-placeholder="Start Date" md-min-date="requestOffController.minDate"></md-datepicker>
+                <md-datepicker name="startDate" required ng-model="controller.requestOff.startDate" md-placeholder="Start Date" md-min-date="controller.minDate"></md-datepicker>
                 <div class="validation-messages" ng-messages="requestOffForm.startDate.$error" role="alert" multiple>
                     <div ng-message="valid" class="my-message">The entered value is not a valid date. Please use mm/dd/yyyy.</div>
                     <div ng-message="required" class="my-message">You must enter a start date</div>
@@ -18,7 +14,7 @@
 
             <div  class="md-block" flex-gt-sm>
                 <h4>End Date</h4>
-                <md-datepicker name="endDate" required ng-model="requestOffController.requestOff.endDate" md-placeholder="End Date" md-min-date="requestOffController.requestOff.startDate"></md-datepicker>
+                <md-datepicker name="endDate" required ng-model="controller.requestOff.endDate" md-placeholder="End Date" md-min-date="controller.requestOff.startDate"></md-datepicker>
                 <div class="validation-messages" ng-messages="requestOffForm.endDate.$error" role="alert" multiple>
                     <div ng-message="valid" class="my-message">The entered value is not a valid date. Please use mm/dd/yyyy.</div>
                     <div ng-message="required" class="my-message">You must enter an end date</div>
@@ -28,7 +24,7 @@
 
             <md-input-container class="md-block">
                 <label>Reason</label>
-                <textarea ng-model="requestOffController.requestOff.reasonText" md-maxlength="1000" required name="reasonText" rows="5" md-select-on-focus></textarea>
+                <textarea ng-model="controller.requestOff.reasonText" md-maxlength="1000" required name="reasonText" rows="5" md-select-on-focus></textarea>
                 <div class="validation-messages" ng-messages="requestOffForm.reasonText.$error" role="alert" multiple>
                     <div ng-message="required" class="my-message">Reason is required</div>
                     <div ng-message="md-maxlength" class="my-message">Your maximum length can be no longer than 1000 characters</div>

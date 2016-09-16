@@ -6,17 +6,17 @@ angular.module("KobeStaffWebsite")
             .when("/", {
                 templateUrl: "templates/index.html",
                 controller: "IndexController",
-                controllerAs: "indexController"
+                controllerAs: "controller"
             })
             .when("/request-off", {
                 templateUrl: "templates/request-off.html",
                 controller: "RequestOffController",
-                controllerAs: "requestOffController"
+                controllerAs: "controller"
             })
             .when("/schedule", {
                 templateUrl: "templates/schedule/schedule.html",
                 controller: "ScheduleController",
-                controllerAs: "scheduleController"
+                controllerAs: "controller"
             })
             .otherwise({
                 redirectTo: "/"

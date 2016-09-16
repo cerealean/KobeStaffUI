@@ -1,7 +1,16 @@
-<header>
-    <md-toolbar>
-        <span>Schedule</span>
-    </md-toolbar>
-</header>
+<ng-include src="'/app/templates/toolbar.html'"></ng-include>
 <div class="template-wrapper">
+    <table class="schedule-table" ng-class-even="'.even'">
+        <thead>
+        <tr>
+            <th>Sunday {{controller.sundayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Monday {{controller.mondayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Tuesday {{controller.tuesdayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Wednesday {{controller.wednesdayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Thursday {{controller.thursdayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Friday {{controller.fridayDate | date:'MM/dd/yyyy'}}</th>
+            <th>Saturday {{controller.saturdayDate | date:'MM/dd/yyyy'}}</th>
+        </tr>
+        </thead>
+    </table>
 </div>

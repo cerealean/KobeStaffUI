@@ -1,7 +1,7 @@
 "use strict";
-
 class RequestOffController {
     constructor($scope){
+        this.toolbarTitle = "Request Off";
         this.$scope = $scope;
         this.currentDate = new Date();
         this.minimumDaysOffset = 14;
@@ -14,7 +14,7 @@ class RequestOffController {
     }
 
     restrictStartDateBeingGreaterThanEndDate(){
-        this.$scope.$watch('requestOffController.requestOff.startDate', (newValue, oldValue) => {
+        this.$scope.$watch('controller.requestOff.startDate', (newValue, oldValue) => {
             if(newValue){
                 const endDateLessThanStartDate = this.requestOff.endDate && (this.requestOff.endDate < this.requestOff.startDate);
                 this.requestOff.endDate = endDateLessThanStartDate ? newValue : oldValue;
@@ -32,4 +32,4 @@ class RequestOffController {
 }
 
 angular.module("KobeStaffWebsite")
-    .controller("RequestOffController", ["$scope", ($scope) => new RequestOffController($scope)]);
+    .controller("RequestOffController", ['$scope',($scope) => new RequestOffController($scope)]);

@@ -17,3 +17,15 @@
     color: #dd2c00;
     margin: 5px 0 0 25px;
 }
+
+.schedule-table thead {
+    background-color: #1b6d85;
+}
+
+.schedule-table tbody td {
+    background-color: #c4c4c4;
+}
+
+.schedule-table.even tbody td {
+    background-color: #8d8d8d;
+}
