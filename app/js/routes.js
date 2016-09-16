@@ -18,6 +18,11 @@ angular.module("KobeStaffWebsite")
                 controller: "ScheduleController",
                 controllerAs: "controller"
             })
+            .when("/logout", {
+                templateUrl: "/app/templates/logout/logout.html",
+                controller: "LogoutController",
+                controllerAs: "controller"
+            })
             .otherwise({
                 redirectTo: "/"
             })
