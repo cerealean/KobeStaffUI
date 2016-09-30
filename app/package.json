@@ -2,11 +2,11 @@
   "name": "kobe-staff-ui",
   "version": "0.0.1",
   "description": "UI for Kobe Japanese Steakhouse website in Columbia, MO",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/cerealean/KobeStaffUI.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cerealean/KobeStaffUI.git"
   },
-  "license" : "proprietary",
+  "license": "proprietary",
   "contributors": [
     {
       "name": "Michael Crawford",
@@ -17,6 +17,7 @@
     "angular": "^1.5.6",
     "angular-animate": "^1.5.6",
     "angular-aria": "^1.5.6",
+    "angular-drag-and-drop-lists": "^1.4.0",
     "angular-material": "^1.0.9",
     "angular-material-icons": "^0.7.0",
     "angular-messages": "^1.5.6",

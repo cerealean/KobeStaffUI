@@ -4,7 +4,8 @@ const dependencies = [
     "ngAnimate",
     "ngMaterial",
     "ngMessages",
-    "ngMdIcons"
+    "ngMdIcons",
+    "dndLists"
 ];
 angular.module("KobeStaffWebsite", dependencies);
 

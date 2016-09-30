@@ -1,16 +1,39 @@
 <ng-include src="'/app/templates/toolbar.html'"></ng-include>
 <div class="template-wrapper">
-    <table class="schedule-table" ng-class-even="'.even'">
-        <thead>
-        <tr>
-            <th>Sunday {{controller.sundayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Monday {{controller.mondayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Tuesday {{controller.tuesdayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Wednesday {{controller.wednesdayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Thursday {{controller.thursdayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Friday {{controller.fridayDate | date:'MM/dd/yyyy'}}</th>
-            <th>Saturday {{controller.saturdayDate | date:'MM/dd/yyyy'}}</th>
-        </tr>
-        </thead>
-    </table>
+    <div class="schedule-table">
+        <div ng-repeat="(dayName, dayData) in controller.schedule" class="schedule-column">
+            <div class="schedule-column-header">{{dayName}} {{dayData.Date | date:'MM/dd/yyyy'}}</div>
+            <div dnd-list="dayData.Staff" class="schedule-staff-list">
+                <div ng-repeat="staff in dayData.Staff"
+                    dnd-draggable="staff"
+                    dnd-effect-allowed="move"
+                    class="draggable-staff-item"
+                    dnd-moved="dayData.Staff.splice($index, 1)">{{staff.Name}}</div>
+            </div>
+        </div>
+        <div class="schedule-column">
+            <div class="schedule-column-header schedule-column-header-red">Trash</div>
+            <div class="schedule-trash-can">
+                <div dnd-list="[]">
+                    <div><ng-md-icon icon="delete_forever" style="fill: red;" size="65"></ng-md-icon></div>
+                </div>
+            </div>
+            <div class="schedule-column-header">Employees</div>
+            <div class="draggable-staff-item">
+                <md-select ng-model="controller.selectedRole">
+                    <label>Role</label>
+                    <md-option ng-repeat="role in controller.roles" ng-value="role">{{role.Name}}</md-option>
+                </md-select>
+            </div>
+            <div dnd-list="controller.employeesForSchedule" class="employee-list">
+                <div ng-repeat="employee in controller.employeesForSchedule"
+                     dnd-draggable="employee"
+                     dnd-copied="controller.employeeListOnCopy()"
+                     class="draggable-staff-item"
+                     dnd-effect-allowed="copy">
+                    {{employee.Name}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
